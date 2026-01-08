@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1767905983 source:c:\users\kordy\onedrive\belgeler\github\basic-projects\2-positive-negative\main.c
+	<stdio.h>
+	<stdlib.h>
+
