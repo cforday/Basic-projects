@@ -99,7 +99,8 @@ int main()
                 case 2:
                     if(yetkiseviyesi>=2)
                     {
-                        printf("2. Menu");
+                        printf("1 - ) Kok Sayi Hesaplama\n");
+                        printf("2 - ) Ust Sayi hesaplama\n");
                     }
                     else
                     {
@@ -107,7 +108,8 @@ int main()
                     }
                     break;
                 case 3:
-                    printf("Menu 3.");
+                    printf("Kullanici Adiniz: %d",kAd);
+                    printf("")
                     break;
 
                 case 4:
