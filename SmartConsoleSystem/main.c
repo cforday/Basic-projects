@@ -9,11 +9,12 @@ int main()
     int kayitliAd=333,kayitliSifre=333,deneme=3;
     //KULLANICIDAN İSTENİLEN DEGERLER
     int kAd,kSifre,yetki,yetkiseviyesi,menuSecenek;
+    float sayi,sayi2;
     //GİRİS CHECKLEME
     bool girisDogrulama=false;
     //ASCII DOGRULAMA
     char ASCII;
-    do
+
     {
 
         //KULLANICI ADI
@@ -99,8 +100,38 @@ int main()
                 case 2:
                     if(yetkiseviyesi>=2)
                     {
+                        system("cls");
                         printf("1 - ) Kok Sayi Hesaplama\n");
                         printf("2 - ) Ust Sayi hesaplama\n");
+
+                        printf("Hangisini secmek istersiniz: ");
+                        scanf("%d",&menuSecenek);
+
+                        switch(menuSecenek)
+                        {
+                        case 1:
+                            system("cls");
+                            printf("Bir sayi giriniz: ");
+                            scanf("%f",&sayi);
+
+                            printf("Girdiginiz sayinin koku %f\n",sqrt(sayi));
+                            break;
+
+                        case 2:
+                            system("cls");
+                            printf("Bir sayi giriniz: ");
+                            scanf("%f",&sayi);
+
+                            printf("Girdiginiz sayinin ustunu giriniz: ");
+                            scanf("%f",&sayi2);
+
+                            printf("Girdiginiz sayinin koku %.2f\n",pow(sayi,sayi2));
+                            break;
+
+                        default:
+                            printf("Yanlis deger girdiniz");
+                            break;
+                        }
                     }
                     else
                     {
@@ -108,14 +139,55 @@ int main()
                     }
                     break;
                 case 3:
-                    printf("Kullanici Adiniz: %d",kAd);
-                    printf("")
+                    printf("Kullanici Adiniz: %d\n",kAd);
+                    printf("Sifreniz: %d\n",kSifre);
                     break;
 
                 case 4:
                     if(yetkiseviyesi==3)
                     {
-                        printf("4. Menu");
+                        system("cls");
+                        printf("1-) Yetki Seviyesi degistirme\n");
+                        printf("3-) Ana Menuye Don\n");
+
+                        printf("Hangisini Secmek istersiniz: ");
+                        scanf("%d",&menuSecenek);
+
+                        switch(menuSecenek)
+                        {
+                        case 1:
+                            system("cls");
+                            printf("1 - > Standart Kullanici\n");
+                            printf("2 - > Yetkili Kullanici\n");
+                            printf("3 - > Admin\n");
+                            printf("Yetkiniz: ");
+                            scanf(" %d",&yetki);
+                            do
+                            {
+                            if(yetki==1)
+                            {
+                                yetkiseviyesi=1;
+                            }
+                            else if(yetki==2)
+                            {
+                                yetkiseviyesi=2;
+                            }
+                            else if(yetki==3)
+                            {
+                                yetkiseviyesi=3;
+                            }
+                            else
+                            {
+                                printf("Lutfen yetkiyi 1-3 arasindan bir sayi giriniz\n");
+                            }
+                            }while(yetki!=1 && yetki!=2 && yetki!=3);
+                            break;
+
+                        case 2:
+                            printf("Ana Menuye Donuluyor\n");
+                            break;
+
+                        }
                     }
                     else
                     {
