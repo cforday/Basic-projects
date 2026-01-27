@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1769485443 source:c:\users\kordyss99\documents\github\basic-projects\egzersiz-12\main.c
+	<stdio.h>
+	<stdlib.h>
+	<limits.h>
+
